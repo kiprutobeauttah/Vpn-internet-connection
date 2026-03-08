@@ -15,7 +15,7 @@ export default function HomeClient() {
       <header className="w-full py-4 bg-blue-950 text-white">
         <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
           <Link href="/" className="font-bold text-xl">
-            SecureVPN
+            8QN-180
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="/services" className="hover:text-blue-300">
@@ -29,11 +29,8 @@ export default function HomeClient() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button asChild variant="ghost" className="text-white hover:bg-blue-900">
-              <Link href="/dashboard">Sign In</Link>
-            </Button>
             <Button asChild className="bg-blue-600 hover:bg-blue-700">
-              <Link href="/downloads">Get Started</Link>
+              <Link href="/downloads">Download Extensions</Link>
             </Button>
           </div>
         </div>
@@ -44,19 +41,18 @@ export default function HomeClient() {
         <div className="container px-4 md:px-6 mx-auto flex flex-col items-center text-center space-y-8">
           <div className="space-y-4 max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              Secure, Private Internet Access
+              Block Ads, Save Data, Browse Faster
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-[700px] mx-auto">
-              Connect to our global network of servers and enjoy unrestricted, private internet access anywhere in the
-              world.
+              Powerful browser extensions that block ads, stop trackers, and compress data to save bandwidth. Free and open source.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-              <Link href="/downloads">Get Started</Link>
+              <Link href="/downloads">Download Now</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-blue-300 text-blue-100 hover:bg-blue-800">
-              <Link href="#how-it-works">Learn More</Link>
+              <Link href="/services">View Features</Link>
             </Button>
           </div>
         </div>
@@ -79,14 +75,14 @@ export default function HomeClient() {
         <div className="container px-4 md:px-6 mx-auto flex flex-col items-center text-center space-y-8">
           <div className="space-y-4 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
-              Ready to Experience Secure, Unrestricted Internet?
+              Ready to Block Ads and Save Data?
             </h2>
             <p className="text-xl text-blue-100 max-w-[700px] mx-auto">
-              Join thousands of satisfied users who enjoy private browsing every day.
+              Download Storm AdBlocker or Fast-Browse today and experience faster, cleaner browsing.
             </p>
           </div>
           <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-blue-100">
-            <Link href="/downloads">Get Started Now</Link>
+            <Link href="/downloads">Download Extensions</Link>
           </Button>
         </div>
       </section>

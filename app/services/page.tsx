@@ -3,113 +3,49 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, Ban, Database, Eye, Download, Zap, Check } from "lucide-react"
+import { Ban, Database, Check } from "lucide-react"
 import Footer from "@/components/footer"
 
 export default function ServicesPage() {
   const services = [
     {
-      icon: Shield,
-      title: "VPN Service",
-      description: "Secure, encrypted connection to protect your online privacy",
-      features: [
-        "Military-grade encryption",
-        "50+ server locations worldwide",
-        "No logs policy",
-        "Kill switch protection",
-        "Unlimited bandwidth",
-        "Multi-device support"
-      ],
-      color: "blue",
-      link: "/#pricing"
-    },
-    {
       icon: Ban,
-      title: "Ad & Tracker Blocker",
-      description: "Block ads, trackers, and malicious content automatically",
+      title: "Storm AdBlocker",
+      description: "Lightweight ad and tracker blocker for faster browsing",
       features: [
         "Block ads from major networks",
         "Stop analytics tracking",
         "Prevent fingerprinting",
         "Block malware domains",
         "Real-time protection",
-        "Customizable blocklists"
+        "Minimal resource usage"
       ],
       color: "red",
-      link: "/services/adblocker"
+      link: "/downloads"
     },
     {
       icon: Database,
-      title: "Data Compression",
-      description: "Compress web traffic to save up to 90% of your data usage",
+      title: "Fast-Browse",
+      description: "Ad blocker with data compression to save bandwidth",
       features: [
-        "Intelligent compression",
+        "Block ads and trackers",
+        "Compress web traffic",
         "Save 50-90% data",
         "Faster page loading",
-        "Works on all websites",
-        "Automatic optimization",
-        "Real-time statistics"
+        "Real-time statistics",
+        "One-click toggle"
       ],
       color: "green",
-      link: "/services/compression"
-    },
-    {
-      icon: Eye,
-      title: "Privacy Protection",
-      description: "Complete privacy suite to protect your digital footprint",
-      features: [
-        "Block tracking cookies",
-        "Prevent browser fingerprinting",
-        "Hide your IP address",
-        "Secure DNS queries",
-        "WebRTC leak protection",
-        "Privacy-focused browsing"
-      ],
-      color: "purple",
-      link: "/services/privacy"
-    },
-    {
-      icon: Zap,
-      title: "Speed Optimization",
-      description: "Optimize your connection for maximum speed and performance",
-      features: [
-        "Automatic server selection",
-        "Load balancing",
-        "Protocol optimization",
-        "Reduced latency",
-        "Smart routing",
-        "Performance monitoring"
-      ],
-      color: "yellow",
-      link: "/services/speed"
-    },
-    {
-      icon: Download,
-      title: "Browser Extension",
-      description: "All-in-one Chrome extension with ad blocking and compression",
-      features: [
-        "One-click protection",
-        "Ad & tracker blocking",
-        "Data compression",
-        "Usage statistics",
-        "Easy toggle controls",
-        "Lightweight & fast"
-      ],
-      color: "indigo",
-      link: "/services/extension"
+      link: "/downloads"
     }
   ]
 
   const getColorClasses = (color: string) => {
     const colors = {
-      blue: "bg-blue-100 text-blue-600 hover:bg-blue-200",
       red: "bg-red-100 text-red-600 hover:bg-red-200",
-      green: "bg-green-100 text-green-600 hover:bg-green-200",
-      purple: "bg-purple-100 text-purple-600 hover:bg-purple-200",
-      yellow: "bg-yellow-100 text-yellow-600 hover:bg-yellow-200",
-      indigo: "bg-indigo-100 text-indigo-600 hover:bg-indigo-200"
+      green: "bg-green-100 text-green-600 hover:bg-green-200"
     }
-    return colors[color as keyof typeof colors] || colors.blue
+    return colors[color as keyof typeof colors] || colors.red
   }
 
   return (
@@ -117,7 +53,7 @@ export default function ServicesPage() {
       <header className="bg-white border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="font-bold text-xl text-blue-600">
-            SecureVPN
+            8QN-180
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-gray-600 hover:text-gray-900">
@@ -126,15 +62,12 @@ export default function ServicesPage() {
             <Link href="/services" className="font-medium">
               Services
             </Link>
-            <Link href="/#pricing" className="text-gray-600 hover:text-gray-900">
-              Pricing
-            </Link>
-            <Link href="/dashboard" className="text-gray-600 hover:text-gray-900">
-              Dashboard
+            <Link href="/downloads" className="text-gray-600 hover:text-gray-900">
+              Downloads
             </Link>
           </nav>
           <Button asChild>
-            <Link href="/#pricing">Get Started</Link>
+            <Link href="/downloads">Download</Link>
           </Button>
         </div>
       </header>
@@ -142,16 +75,16 @@ export default function ServicesPage() {
       <section className="w-full py-12 md:py-24 bg-gradient-to-b from-blue-900 to-blue-950 text-white">
         <div className="container px-4 md:px-6 mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
-            Our Services
+            Our Extensions
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-[700px] mx-auto">
-            Complete suite of privacy, security, and data-saving tools
+            Free and open source browser extensions for ad blocking and data saving
           </p>
         </div>
       </section>
 
       <section className="container mx-auto px-4 py-12 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -172,8 +105,8 @@ export default function ServicesPage() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button asChild variant="outline" className="w-full">
-                  <Link href={service.link}>Learn More</Link>
+                <Button asChild className="w-full">
+                  <Link href={service.link}>Download Now</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -184,13 +117,13 @@ export default function ServicesPage() {
       <section className="w-full py-12 md:py-24 bg-blue-900 text-white">
         <div className="container px-4 md:px-6 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">
-            Get All Services in One Package
+            Free and Open Source
           </h2>
           <p className="text-xl text-blue-100 max-w-[700px] mx-auto mb-8">
-            Subscribe to our Premium or Ultimate plan and get access to all services
+            Both extensions are completely free with no hidden costs. Download and start saving data today.
           </p>
           <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-blue-100">
-            <Link href="/#pricing">View Pricing</Link>
+            <Link href="/downloads">Download Extensions</Link>
           </Button>
         </div>
       </section>

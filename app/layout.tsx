@@ -14,9 +14,9 @@ export const dynamicParams = true
 export const revalidate = 0
 
 export const metadata = {
-  title: "SecureVPN - Affordable Private Internet Access",
+  title: "8QN-180 - Free Ad Blocker & Data Saver Extensions",
   description:
-    "Secure, private internet access for just a few dollars a day. Connect to our global network of servers and enjoy unrestricted browsing.",
+    "Download Storm AdBlocker and Fast-Browse extensions. Block ads, stop trackers, and save up to 90% data. Free and open source browser extensions.",
     generator: 'v0.app'
 }
 
