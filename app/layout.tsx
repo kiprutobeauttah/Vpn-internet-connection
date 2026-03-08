@@ -9,6 +9,10 @@ const inter = Inter({
   fallback: ['system-ui', 'arial']
 })
 
+export const dynamic = 'force-dynamic'
+export const dynamicParams = true
+export const revalidate = 0
+
 export const metadata = {
   title: "SecureVPN - Affordable Private Internet Access",
   description:
