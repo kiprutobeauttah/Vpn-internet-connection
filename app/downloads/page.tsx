@@ -214,7 +214,7 @@ export default function DownloadsPage() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="w-full">
-                  <Link href={item.installGuide}>
+                  <Link href="/install">
                     Installation Guide
                   </Link>
                 </Button>
