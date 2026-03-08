@@ -1,4 +1,4 @@
-import { Shield, Globe, Zap, Lock, Wifi, Clock } from "lucide-react"
+import { Shield, Globe, Zap, Lock, Wifi, Clock, Ban, Gauge, Eye, Database } from "lucide-react"
 
 export default function FeatureSection() {
   const features = [
@@ -13,9 +13,19 @@ export default function FeatureSection() {
       description: "Connect to servers in over 50 countries to access geo-restricted content.",
     },
     {
+      icon: Ban,
+      title: "Ad & Tracker Blocker",
+      description: "Built-in ad blocker removes ads and trackers, saving data and improving speed.",
+    },
+    {
+      icon: Database,
+      title: "Data Compression",
+      description: "Compress web traffic to save up to 90% of your data usage automatically.",
+    },
+    {
       icon: Zap,
       title: "Lightning Fast",
-      description: "High-speed servers ensure you can browse, stream, and download without lag.",
+      description: "High-speed servers with compression ensure you browse faster than ever.",
     },
     {
       icon: Lock,
@@ -23,9 +33,19 @@ export default function FeatureSection() {
       description: "We never track, store, or share your online activities or personal information.",
     },
     {
+      icon: Eye,
+      title: "Privacy Protection",
+      description: "Block analytics, fingerprinting, and tracking scripts automatically.",
+    },
+    {
       icon: Wifi,
       title: "Public WiFi Protection",
       description: "Stay safe on public networks with automatic protection against threats.",
+    },
+    {
+      icon: Gauge,
+      title: "Bandwidth Saver",
+      description: "Save up to 90% data with intelligent compression and ad blocking.",
     },
     {
       icon: Clock,
@@ -56,6 +76,11 @@ export default function FeatureSection() {
               <p className="text-gray-500">{feature.description}</p>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-12">
+          <Button asChild size="lg" variant="outline">
+            <Link href="/services">View All Services</Link>
+          </Button>
         </div>
       </div>
     </section>

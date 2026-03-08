@@ -19,11 +19,17 @@ export default function DashboardPage() {
             SecureVPN
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/dashboard" className="font-medium">
+            <Link href="/" className="font-medium">
               Dashboard
             </Link>
             <Link href="/dashboard/servers" className="text-gray-600 hover:text-gray-900">
               Servers
+            </Link>
+            <Link href="/services" className="text-gray-600 hover:text-gray-900">
+              Services
+            </Link>
+            <Link href="/downloads" className="text-gray-600 hover:text-gray-900">
+              Downloads
             </Link>
             <Link href="/dashboard/settings" className="text-gray-600 hover:text-gray-900">
               Settings

@@ -5,10 +5,42 @@ import FeatureSection from "@/components/feature-section"
 import HowItWorks from "@/components/how-it-works"
 import Testimonials from "@/components/testimonials"
 import FAQ from "@/components/faq"
+import Footer from "@/components/footer"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Navigation Header */}
+      <header className="w-full py-4 bg-blue-950 text-white">
+        <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
+          <Link href="/" className="font-bold text-xl">
+            SecureVPN
+          </Link>
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link href="/#pricing" className="hover:text-blue-300">
+              Pricing
+            </Link>
+            <Link href="/services" className="hover:text-blue-300">
+              Services
+            </Link>
+            <Link href="/downloads" className="hover:text-blue-300">
+              Downloads
+            </Link>
+            <Link href="/#faq" className="hover:text-blue-300">
+              FAQ
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <Button asChild variant="ghost" className="text-white hover:bg-blue-900">
+              <Link href="/dashboard">Sign In</Link>
+            </Button>
+            <Button asChild className="bg-blue-600 hover:bg-blue-700">
+              <Link href="/subscribe">Get Started</Link>
+            </Button>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-blue-900 to-blue-950 text-white">
         <div className="container px-4 md:px-6 mx-auto flex flex-col items-center text-center space-y-8">
@@ -75,79 +107,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full py-6 bg-gray-900 text-gray-300">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-lg font-medium">SecureVPN</h3>
-              <p className="text-sm text-gray-400">Providing secure, private internet access since 2023.</p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-medium">Company</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-medium">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Support
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Documentation
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-medium">Legal</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Cookie Policy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-            <p>© 2023 SecureVPN. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
