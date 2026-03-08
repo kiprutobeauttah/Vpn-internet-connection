@@ -1,4 +1,8 @@
+"use client"
+
 import { Shield, Globe, Zap, Lock, Wifi, Clock, Ban, Gauge, Eye, Database } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function FeatureSection() {
   const features = [

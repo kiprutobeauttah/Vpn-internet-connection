@@ -1,3 +1,5 @@
+"use client"
+
 import { Download, Settings, Wifi } from "lucide-react"
 
 export default function HowItWorks() {
